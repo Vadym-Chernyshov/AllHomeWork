@@ -4,14 +4,16 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Document</title>
+ <link rel="stylesheet" href="./styles/reset.css">
  <link rel="stylesheet" href="./styles/fontsStyle.css">
  <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
  <header>
   <!-- Вихід зі сторінки реєстрації -->
-  <div style="text-align: right;">
+  <div>
    <!-- повертаємось на головну сторінку -->
+    <!-- в майбутньому переробити!!! -->
    <a href="./index.html">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17007 3.17007C3.39682 2.94331 3.76447 2.94331 3.99122 3.17007L9 8.17884L14.0088 3.17007C14.2355 2.94331 14.6032 2.94331 14.8299 3.17007C15.0567 3.39682 15.0567 3.76447 14.8299 3.99122L9.82116 9L14.8299 14.0088C15.0567 14.2355 15.0567 14.6032 14.8299 14.8299C14.6032 15.0567 14.2355 15.0567 14.0088 14.8299L9 9.82116L3.99122 14.8299C3.76447 15.0567 3.39682 15.0567 3.17007 14.8299C2.94331 14.6032 2.94331 14.2355 3.17007 14.0088L8.17884 9L3.17007 3.99122C2.94331 3.76447 2.94331 3.39682 3.17007 3.17007Z" fill="#46A358"/>
@@ -19,145 +21,56 @@
    </a>
   </div> 
  </header>
-
- <h1 style="text-align: center;">
-  <span style="color: #3d3d3d;
-        font-family: Cera Pro;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 16px; /* 80% */">
-   Login
-  </span>
-  <span style="color: #3D3D3D;
-        font-family: Cera Pro;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 250;
-        line-height: 16px; /* 88.889% */">
-   I
-  </span>
-  <span style="color: #46A358;
-        font-family: Cera Pro;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 16px; /* 80% */">
-   Register
-  </span>
- </h1>
-
+<!-- форма -->
  <form action="/submit" 
-       method="post" 
-       style="display: flex;  
-       flex-direction: column; 
-       gap: 5px;
-       /* Спосіб зробити форму по центру сторінки */
-       width: 275px;
-       margin: 0 auto;">
-   <span style="color: #3D3D3D;
-         font-family: Cera Pro;
-         font-size: 13px;
-         font-style: normal;
-         font-weight: 400;
-         line-height: 16px; /* 123.077% */">
+       method="post"
+       class="formForRegistration">
+   <h1>
+     <span>Login</span>
+     <span>I</span>
+     <span class="greenBoy">Register</span>
+   </h1>      
+   <span>
     Enter your email and password to register.
    </span>
+   
   <label for="">
-   <input type="text" 
-   placeholder="Username">
+   <input type="text" placeholder="Username">
   </label>  
   <label for="">
-   <input type="email" 
-   placeholder="Enter your email adress">
+   <input type="email" placeholder="Enter your email adress">
   </label>
   <label for="">
-   <input type="password" 
-   placeholder="Password">
+   <input type="password" placeholder="Password">
   </label> 
   <label for="">
-   <input type="password" 
-   placeholder="Confirm Password">
+   <input type="password" placeholder="Confirm Password">
   </label>
 
   <button type="submit"
-  onclick="alert('Ви зареєстровані')"
-  style="border-radius: 5px;
-  background-color: #46A358;  
-  flex-shrink: 0;
-  /* прибираємо рамку */
-  border: none;">
-   <span style="color: #FFF;
-         font-family: Cera Pro;
-         font-size: 16px;
-         font-style: normal;
-         font-weight: 700;
-         line-height: 16px; /* 100% */">
-    Register
-   </span>   
+  onclick="alert('Ви зареєстровані')">
+   <span>Register</span>
   </button>
-  <span style="color: #3D3D3D;
-        font-family: Cera Pro;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 16px; /* 123.077% */">
+  
+  <span>
    -------------------------------
    Or register with 
    -------------------------------
   </span>
 
-  <button style="border-radius: 5px;
-          border: 1px solid #EAEAEA;
-          background: #FFF;"
-          onclick="alert('Рєетрація за допомогою гугл акаунта здійснена')">
-   <img src="./svgCollection/google 1.svg" 
-        alt="google"       
-        style="vertical-align: middle;"> 
-        <!-- vertical-align: middle - щоб було по центру -->
-   <span style="color: #727272;
-          text-align: center;
-          font-family: Cera Pro;
-          font-size: 13px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 16px; /* 123.077% */
-          vertical-align: middle;">
-    Continue with Google
-   </span>
+  <button onclick="alert('Рєетрація за допомогою гугл акаунта здійснена')">
+   <img src="./svgCollection/google 1.svg" alt="google">        
+   <span>Continue with Google</span>
   </button>
-  <button style="border-radius: 5px;
-          border: 1px solid #EAEAEA;
-          background: #FFF;"
-          onclick="alert('Рєетрація за допомогою фейсбук акаунта здійснена')">
-   <img src="./svgCollection/facebook 1.svg" 
-        alt="facebook"       
-        style="vertical-align: middle;"> 
-        <!-- vertical-align: middle - щоб було по центру -->
-   <span style="color: #727272;
-          text-align: center;
-          font-family: Cera Pro;
-          font-size: 13px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 16px; /* 123.077% */
-          vertical-align: middle;">
-    Continue with Facebook
-   </span>
+  <button onclick="alert('Рєетрація за допомогою фейсбук акаунта здійснена')">
+   <img src="./svgCollection/facebook 1.svg" alt="facebook"> 
+   <span> Continue with Facebook </span>
   </button>
+
  </form>
 
  <!-- Створення зеленої смужки -->
- <div style="
-  width: 100%;
-  height: 6px;
-  background-color: #46A358;
-
-  /* Щоб лінія завжди була приклеєна знизу */
-  position: fixed;
-  bottom: 0;
-  left: 0;
-"></div>
+ <div class="foot"></div>
  
 </body>
 </html>
