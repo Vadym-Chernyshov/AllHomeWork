@@ -1,6 +1,6 @@
 /* встановлюю один шрифт для вього */
 body{
-    font-family: Cera Pro Light, sans-serif;
+    font-family: Cera Pro, sans-serif;    
     font-style: normal;
 }
 /* красива лінія знизу сторінки */
@@ -49,7 +49,7 @@ form[class = formForRegistration] > h1{
     font-weight: 500;
 }
 /* для виділення зеленого */
-form[class = formForRegistration] [class = greenBoy]{
+.greenBoy{
     color: #46A358;
 }
 

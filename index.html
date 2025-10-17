@@ -7,23 +7,39 @@
  <link rel="stylesheet" href="./styles/reset.css">
  <link rel="stylesheet" href="./styles/fontsStyle.css">
  <link rel="stylesheet" href="./styles/style.css">
+ <link rel="stylesheet" href="./styles/styleForHomePage.css">
 </head>
 <body>
- <header>
-  <!-- посилання на сторінку реєстрації -->
-  <div>
-   <a href="./registration.html"      
-     target="_blank">
-     Page for registration
-   </a>
-  </div> 
- </header>
- <hr>
- <!-- тимчасова заглушка -->
- <p>
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit explicabo 
-  recusandae rem eligendi quibusdam quam accusantium, sequi quod aut mollitia 
-  reprehenderit tenetur, et error perspiciatis ipsam, aliquam possimus hic aliquid!
- </p>
+<div class="container">
+  <header class="header">
+    <img src="./svgCollection/logo1.svg" alt="logo">
+    <nav class="list">
+      <li class="list-item active">Home</li>
+      <li class="list-item">Shop</li>
+      <li class="list-item">Plant Care</li>
+      <li class="list-item">Blogs</li>
+    </nav>
+    <dutton class="btnlogin">
+      <img src="./svgCollection/login.svg" alt="login">
+      Login
+    </dutton>
+  </header>
+  <main class="main">
+    <div>
+      <span class="welcomer">Welcome to GreenShop</span>
+      <h1 class="bigletter">Let’s Make a <br>
+        Better <span class="greenBoy">Planet</span>
+      </h1>
+      <p>
+        We are an online plant shop offering a wide range of cheap and trendy plants. 
+        Use our plants to create an unique Urban Jungle. Order your favorite plants!
+      </p>
+      <button class="shopnow">
+        Shop Now
+      </button>
+    </div>
+    <img src="./img/bigplant.png" alt="Big Plant">
+  </main>
+</div>
 </body>
 </html>
