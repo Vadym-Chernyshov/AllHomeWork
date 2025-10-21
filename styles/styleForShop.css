@@ -1,0 +1,50 @@
+.containerForShopContent{
+    padding: 170px 120px 210px;
+    display: flex;        
+    gap: 50px;
+}
+
+.leftShopPanel{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.categories{
+    padding: 14px 0px 0px 14px;
+    background-color: #FBFBFB;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.navANDsort{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.navShop{
+    display: flex;
+    /* відстань між елементами */
+    gap: 40px;
+}
+.shopCat{
+    padding-bottom: 7px;    
+    border-bottom: 3px solid transparent;
+}
+.active{
+    border-color: #46A358;
+    font-weight: 700;
+}
+
+.shop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#cardProduct{
+    display: flex;
+    flex-direction: column;
+}
