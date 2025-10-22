@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="./styles/styleForShop.css">
 </head>
 <body>
+    <!-- загальний блок магазина -->
     <div class="containerForShopContent">
+        <!-- лівий блок -->
         <div class="leftShopPanel">
+            <!-- категорії магазину -->
             <div class="categoriesPanel">
                 <nav class="categories">
                     <span class="infoCat">Categories</span>
@@ -25,14 +28,18 @@
                     <li class="categori">Gardening</li>
                     <li class="categori">Accessories</li>
                 </nav>
-            </div>                      
+            </div>
+            <!-- реклама розпродажу -->                                 
             <div class="imgBigSale">
                 <span class = "superSale">Super Sale</span>
                 <span class = "discount">UP TO 75% OFF</span>
                 <img src="./img/forShop/image 12.png" alt="BigSale">
             </div>
         </div>
+
+        <!-- правий блок -->
         <div class="rightShopPanel">
+            <!-- верхнє меню -->
             <div class="navANDsort">
                 <nav class="navShop">
                     <li class="shopCat active">All Plants</li>
@@ -43,10 +50,15 @@
                     Sort by: Default Sorting ↓            
                 </div>
             </div>
+            <!-- магазин -->
             <div class="shop">
-                <li class="cardProduct">
+                <!-- картка товару -->
+                <li class="cardProduct"> 
+                    <!-- малюнок товару -->
                     <img src="./img/forShop/image 1.png" alt="plants1" class="shopImages">
+                    <!-- назва товару -->
                     <span class="nameProduct">Barbeton Daisy</span>
+                    <!-- ціна товару -->
                     <span class="priceProduct">$119.00</span>
                 </li>
                 <li class="cardProduct">
@@ -92,13 +104,13 @@
             </div>
         </div>
     </div>
-
+    <!-- окремий блок з навігацією по сторінкам -->
     <div class="pages">
         <button class="page activePage">1</button>
-        <button class="page">2</button>
-        <button class="page">3</button>
-        <button class="page">4</button>
-        <button class="page">5</button>
+        <button class="page"><span class="number">2</span></button>
+        <button class="page"><span class="number">3</span></button>
+        <button class="page"><span class="number">4</span></button>
+        <button class="page"><span class="number">></span></button>
     </div>
 </body>
 </html>
