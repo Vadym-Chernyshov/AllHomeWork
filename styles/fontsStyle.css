@@ -38,3 +38,7 @@
          url('../fonts/CeraPro-Regular.woff2') format('woff2')
     ;
 }
+@font-face{
+    font-family: Hanging Letters;
+    src: url('../fonts/Hanged-Letters.ttf') format('truetype');
+}

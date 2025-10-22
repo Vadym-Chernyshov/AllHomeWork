@@ -1,7 +1,7 @@
 .containerForShopContent{
-    padding: 170px 120px 210px;
+    padding: 170px 120px 50px;
     display: flex;        
-    gap: 50px;
+    gap: 30px;    
 }
 
 .leftShopPanel{
@@ -9,13 +9,73 @@
     flex-direction: column;
     height: 100%;
 }
-
-.categories{
-    padding: 14px 0px 0px 14px;
+.categoriesPanel
+{
+    display: flex;
+    flex-grow: 1;
     background-color: #FBFBFB;
+    margin-bottom: 1px;    
+}
+.categories{
+    padding: 13px 0px 0px 28px;  
+    display: flex;
+    flex-direction: column;    
+    gap: 14px;
+}
+.categories span.infoCat{
+    color: #3D3D3D;    
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 88.889% */
+}
+.categories li.categori{
+    color: #3D3D3D;
+    font-family: "Cera Pro";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+.categories li.categori.activeCategori{
+    color: #46A358;
+    font-style: normal;
+    font-weight: 700;    
+}
+.imgBigSale{    
     display: flex;
     flex-direction: column;
-    gap: 14px;
+
+    background: linear-gradient(180deg, rgba(70, 163, 88, 0.10) 0%, rgba(70, 163, 88, 0.03) 100%);
+}
+
+.imgBigSale span.superSale{
+    color: #46A358;
+    font-family: "Hanging Letters";
+    font-size: 65px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 65px; /* 100% */
+
+    padding-top: 17px;
+    padding-bottom: 13px;
+}
+.imgBigSale span.discount{
+    color: #3D3D3D;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 16px; /* 69.565% */
+}
+
+
+
+
+.rightShopPanel{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .navANDsort{
@@ -36,15 +96,83 @@
     border-color: #46A358;
     font-weight: 700;
 }
+.sort{
+    color: #3D3D3D;    
+    font-size: 15px;   
+    font-weight: 400;
+    line-height: 16px; /* 106.667% */
+}
 
 .shop{
     display: flex;
     flex-wrap: wrap;
+    gap: 70px;
     justify-content: space-between;
     height: 100%;
 }
 
-#cardProduct{
+.cardProduct{
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
 }
+
+.cardProduct img{
+    width: 280px;
+    height: 280px;
+    background-color: #FBFBFB;
+
+    display: flex;
+    align-items: center;       /* вертикальне вирівнювання */
+    justify-content: center;   /* горизонтальне вирівнювання */
+    overflow: hidden;          /* ховає все, що вилізе за межі */
+
+    max-width: 100%;           /* не виходить за ширину */
+    max-height: 100%;          /* не виходить за висоту */
+    object-fit: contain;       /* вписується без спотворень */
+}
+.cardProduct span.nameProduct{   
+    padding-top: 12px;
+    padding-bottom: 6px;
+
+    color: #3D3D3D;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 100% */
+}
+.cardProduct span.priceProduct
+{
+    color: #46A358;    
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 88.889% */
+}
+.pages{
+    margin-right: 120px;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.page{
+    min-width: 35px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #E5E5E5;
+    background-color: white;
+
+    font-family: "Cera Pro";      
+    font-size: 18px;   
+    font-weight: 300;
+    /* line-height: 16px; 88.889% */
+}
+
+.page.activePage{ 
+    padding: 10px;       
+    background-color: #46A358;
+    color: #FFF;           
+    font-weight: 700;    
+}
+
