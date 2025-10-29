@@ -53,6 +53,8 @@
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, rgba(70, 163, 88, 0.10) 0%, rgba(70, 163, 88, 0.03) 100%);
+
+    position: relative;
 }
 /* напис розпродажу */
 .imgBigSale span.superSale{
@@ -71,13 +73,52 @@
 
     padding-bottom: 13px;
 }
-/* напис знижку */
-.imgBigSale span.discount{
+/* напис знижки */
+.imgBigSale span.discountForImage{
     color: #3D3D3D;
     text-align: center;
     font-size: 23px;
     font-weight: 700;
     line-height: 16px; /* 69.565% */
+}
+/* декорації для блоку реклами */
+.decoration1{
+    position: absolute;
+    z-index: 2;
+    /* практика з відсотками */
+    width: 4%;
+    height: 3%;
+    top: 28%;
+    left: 15%;
+
+    border-radius: 29px;
+    background: linear-gradient(145deg, rgba(70, 163, 88, 0.30) -46.09%, rgba(70, 163, 88, 0.00) 103.28%);
+}
+.decoration3{
+    position: absolute;
+    z-index: 2; 
+
+    width: 14%;
+    height: 11%;
+    top: 70%;
+    left: 80%;
+
+    border-radius: 29px;
+    background: linear-gradient(145deg, rgba(70, 163, 88, 0.30) -46.09%, rgba(70, 163, 88, 0.00) 103.28%);
+}
+.decoration2{
+    position: absolute;
+    z-index: 2;
+    flex: 0 0 auto;
+
+    width: 7%;
+    height: 5%;
+    top: 65%;
+    left: 5%;
+
+    border-radius: 7px;
+    border: 2px solid #46A358;
+    opacity: 0.2;
 }
 
 
@@ -102,7 +143,7 @@
     padding-bottom: 7px;    
     border-bottom: 3px solid transparent;
 }
-/* активна категорії */
+/* активна категорія */
 .active{
     border-color: #46A358;
     font-weight: 700;
@@ -125,7 +166,38 @@
 /* картка продукти */
 .cardProduct{
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    /* щоб не стрибало при наведені */
+    border-top: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+/* ефект наведення на товар */
+.cardProduct:hover{ 
+    /* створення верхньої зеленої стрічки */
+    border-top: 2px solid #46A358;
+}
+/* поява іконок */
+.cardProduct:hover .areaForIcon img {
+  opacity: 1;
+}
+/* налаштування етикетки знижки */
+.discount{
+  background: #46A358;
+  position: absolute;
+  z-index: 1;  
+  top: 15px;  
+}
+.discount > span{
+    display: inline-block;
+    padding: 8px 6px;
+    color: #FFF;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 100% */
 }
 /* картинка продукту */
 .cardProduct img{
@@ -147,6 +219,42 @@
     /* щоб картинка не спотворювалася */             
     object-fit: contain;
 }
+/* простір для іконок */
+.areaForIcon{
+    background: #FBFBFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7px;
+    position: relative;
+    /* трохи дамо вилізти на малюнок */
+    margin-top: -5px;
+}
+/* кластери для іконок */
+.areaForIcon > img{
+    height: 35px;
+    flex: 0 0 auto;
+}
+/* іконки */
+.icons{
+    position: absolute;
+    z-index: 1;
+
+    display: flex;
+    gap: 23px;    
+}
+/* робимо частину з іконками невидимою*/
+.areaForIcon img{
+    opacity: 0;
+    /* простір виділений тож можна використати даний ефект */
+    transition: opacity 700ms ease-in-out 20ms;
+}
+.icons > img{
+    /* обмежуємо зображення */
+    width: 24px;     
+    height: 24px;    
+    flex: 0 0 auto;
+}
 /* для назви продукта */
 .cardProduct span.nameProduct{   
     padding-top: 12px;
@@ -166,6 +274,15 @@
     font-style: normal;
     font-weight: 700;
     line-height: 16px; /* 88.889% */
+}
+.originalPrice{
+    color: #A5A5A5;
+    font-family: "Cera Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 88.889% */
+    text-decoration: line-through;
 }
 
 /* окремий блок для навігації по сторінкам */
