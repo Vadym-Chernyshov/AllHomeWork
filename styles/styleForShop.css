@@ -30,6 +30,7 @@
 }
 /* шрифт для заголовку */
 .categories span.infoCat{
+    margin-left: -5px;
     color: #3D3D3D;    
     font-size: 18px;    
     font-weight: 700;
@@ -183,6 +184,14 @@
 .cardProduct:hover .areaForIcon img {
   opacity: 1;
 }
+.cardProduct:hover .areaForIcon svg {
+  opacity: 1;
+}
+
+/* зміна кольору іконок при наведенні */
+.iconSVG:hover path{
+    fill: #46A358;
+}
 /* налаштування етикетки знижки */
 .discount{
   background: #46A358;
@@ -249,7 +258,13 @@
     /* простір виділений тож можна використати даний ефект */
     transition: opacity 700ms ease-in-out 20ms;
 }
-.icons > img{
+.areaForIcon svg{
+    opacity: 0;
+    /* простір виділений тож можна використати даний ефект */
+    transition: opacity 700ms ease-in-out 20ms;
+}
+
+.icons > svg{
     /* обмежуємо зображення */
     width: 24px;     
     height: 24px;    
