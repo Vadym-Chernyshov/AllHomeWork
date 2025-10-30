@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;    
     gap: 14px;
+    user-select: none;
 }
 /* шрифт для заголовку */
 .categories span.infoCat{
@@ -44,7 +45,7 @@
     line-height: 40px;
 }
 /* обрана категорія */
-.categories li.categori.activeCategori{
+.categories li.categori:hover{
     color: #46A358;
     font-style: normal;
     font-weight: 700;    
@@ -143,9 +144,11 @@
 .shopCat{
     padding-bottom: 7px;    
     border-bottom: 3px solid transparent;
+    user-select: none;
 }
+
 /* активна категорія */
-.active{
+.shopCat:hover{
     border-color: #46A358;
     font-weight: 700;
 }
