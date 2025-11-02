@@ -17,7 +17,7 @@ body{
     /* розділення контенту */
     justify-content: space-between;
     /* початкова точка елементів */
-    align-items: flex-start;
+    align-items: center;
     border-bottom: 1px solid rgba(70, 163, 88, 0.50);
     margin-bottom: 12px;
 }
@@ -28,15 +28,111 @@ body{
     /* відстань між елементами */
     gap: 50px;
 }
+/* налаштування навігації */
 .list-item{
     padding-bottom: 25px;
     padding-top: 8px;
     border-bottom: 3px solid transparent;
+
+    position: relative;
+    z-index: 1;
 }
-.active{
+/* хавер навігації */
+.list-item:hover{
     border-color: #46A358;
     font-weight: 700;
 }
+/* частина коду потрібна для "пустого "простору 
+між навігацією й першим підменю */
+.list-item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  /* місток між пунктом і меню */
+  height: 25px; 
+}
+
+/* налаштування першого підменю */
+.firstLevel{    
+    position: absolute;
+    /* відступаємо від навігації */
+    top: 70px;
+    /* для центрування під потрібним пунктом навігації*/    
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #3D3D3D;
+    font-family: "Encode Sans Expanded";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* закриваємо перше підменю */
+    display: none;
+}
+/* відкриваємо перше підменю */
+li.withMenu:hover .firstLevel{
+    display: block;
+}
+/* налаштовуємо компоненти всердині частин підменю */
+.firstLevel > li.firstLevelVal div{    
+    background-color: #E8F0E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.firstLevel > li.firstLevelVal div > span{
+    display: inline-block;
+    padding: 7px 0px 7px 14px;
+    user-select: none;    
+}
+
+/* другий рівень — підменю */
+.secondLevel {
+  position: absolute;
+  top: 0;
+  /* робмо праворуч праворуч */
+  left: 100%; 
+  list-style: none;
+  gap: 14px;
+  /* закриваємо меню */
+  display: none;
+  min-width: 180px;
+}
+/* відкриваємо меню */
+li.mayBeUsed:hover .secondLevel{
+    display:block;
+}
+/* видозмінємо іконку */
+li.mayBeUsed:hover .icon-default
+{    
+    transform: rotate(180deg);    
+}
+/* міняємо колір іконки */
+li.mayBeUsed:hover .icon-default path
+{    
+    fill: #FFF;
+}
+/* трохи підправимо позицію іконки */
+.icon-default{
+    position: relative;
+    right: 17px;
+}
+/* змінюємо стиль частин підменю при наведенні */
+.firstLevel > li.firstLevelVal div:hover{
+    background-color: #1A712A;
+
+    color: #FFF;
+    font-family: "Encode Sans Expanded";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 
 /* кнопка входу */
 .btnlogin{
@@ -61,7 +157,7 @@ body{
 }
 
 /* загальне для тексту й кнопки зліва постеру */
-.main div{
+.main div.leftPart{
     display: flex;
     /* робимо вертикально */
     flex-direction: column;
@@ -112,4 +208,19 @@ body{
     justify-items: center;
     /* корисний елемент щоб не можна було виділяти текст */
     user-select: none;
+}
+/* робимо праву частину постеру з малюнками */
+/* область для малюнків */
+div.rightPart{
+    height: 450px;
+    width: 500px;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+}
+/* підпраавляємо менший малюнок */
+.smallPlant{
+    position: absolute;
+    bottom: 19px;
+    left: 45px;
 }
