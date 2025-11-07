@@ -1,3 +1,4 @@
+/* заголовк сторінки --------------------------------------*/
 /* даємо всьому тілу документа один шрифт */
 body{
     font-family: Cera Pro, sans-serif;    
@@ -223,4 +224,797 @@ div.rightPart{
     position: absolute;
     bottom: 19px;
     left: 45px;
+}
+
+
+/* основа сторінки----------------------------------- */
+
+
+/* для загального блоку магазину */
+.containerForShopContent{
+    padding: 170px 120px 50px;
+    display: flex;        
+    gap: 50px; 
+}
+
+
+/* лівий блок магазину */
+.leftShopPanel{
+    display: flex;
+    flex-direction: column;
+    /* для розділення контенту по висоті */
+    justify-content: space-between;
+    max-width: 300px;
+}
+/* блок навігаціїї по категоріям */
+.categoriesPanel
+{
+    display: flex;
+    flex-grow: 1;
+    background-color: #FBFBFB;        
+}
+/* блок категорій */
+.categories{
+    padding: 13px 0px 0px 28px;  
+    display: flex;
+    flex-direction: column;    
+    gap: 14px;
+    user-select: none;
+}
+/* шрифт для заголовку */
+.categories span.infoCat{
+    margin-left: -5px;
+    color: #3D3D3D;    
+    font-size: 18px;    
+    font-weight: 700;
+    line-height: 16px; /* 88.889% */
+}
+/* шрифт для категорій */
+.categories li.categori{
+    color: #3D3D3D;    
+    font-size: 15px;    
+    font-weight: 400;
+    line-height: 40px;
+}
+/* обрана категорія */
+.categories li.categori:hover{
+    color: #46A358;
+    font-style: normal;
+    font-weight: 700;    
+}
+/* блок реклами */
+.imgBigSale{    
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(70, 163, 88, 0.10) 0%, rgba(70, 163, 88, 0.03) 100%);
+
+    position: relative;
+}
+/* напис розпродажу */
+.imgBigSale span.superSale{
+    color: #46A358;
+    /* інший шрифт */
+    font-family: "Hanging Letters";
+    font-size: 65px;
+    /* по центру */
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 65px; /* 100% */   
+
+    /* відступ для зелених ліній від шрифту */
+    padding-top: 17px;
+
+    padding-bottom: 13px;
+}
+/* напис знижки */
+.imgBigSale span.discountForImage{
+    color: #3D3D3D;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 16px; /* 69.565% */
+}
+/* декорації для блоку реклами */
+.decoration1{
+    position: absolute;
+    z-index: 2;
+    /* практика з відсотками */
+    width: 4%;
+    height: 3%;
+    top: 28%;
+    left: 15%;
+
+    border-radius: 29px;
+    background: linear-gradient(145deg, rgba(70, 163, 88, 0.30) -46.09%, rgba(70, 163, 88, 0.00) 103.28%);
+}
+.decoration3{
+    position: absolute;
+    z-index: 2; 
+
+    width: 14%;
+    height: 11%;
+    top: 70%;
+    left: 80%;
+
+    border-radius: 29px;
+    background: linear-gradient(145deg, rgba(70, 163, 88, 0.30) -46.09%, rgba(70, 163, 88, 0.00) 103.28%);
+}
+.decoration2{
+    position: absolute;
+    z-index: 2;
+    flex: 0 0 auto;
+
+    width: 7%;
+    height: 5%;
+    top: 65%;
+    left: 5%;
+
+    border-radius: 7px;
+    border: 2px solid #46A358;
+    opacity: 0.2;
+}
+
+
+/* правий блок магазину */
+.rightShopPanel{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/* для хідера магазину */
+.navANDsort{
+    display: flex;
+    justify-content: space-between;   
+}
+/* навігація */
+.navShop{
+    display: flex;    
+    gap: 40px;
+}
+/* категорії */
+.shopCat{
+    padding-bottom: 7px;    
+    border-bottom: 3px solid transparent;
+    user-select: none;
+}
+
+/* активна категорія */
+.shopCat:hover{
+    border-color: #46A358;
+    font-weight: 700;
+}
+/* сортування */
+.sort{
+    color: #3D3D3D;    
+    font-size: 15px;   
+    font-weight: 400;
+    line-height: 16px; /* 106.667% */
+}
+
+/* магазин */
+.shop{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: space-between;   
+}
+/* картка продукти */
+.cardProduct{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    /* щоб не стрибало при наведені */
+    border-top: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+/* ефект наведення на товар */
+.cardProduct:hover{ 
+    /* створення верхньої зеленої стрічки */
+    border-top: 2px solid #46A358;
+}
+/* поява іконок */
+.cardProduct:hover .areaForIcon img {
+  opacity: 1;
+}
+.cardProduct:hover .areaForIcon svg {
+  opacity: 1;
+}
+.iconSVG{
+    color: #3D3D3D;
+    transition: color .3s;
+}
+/* зміна кольору іконок при наведенні */
+.iconSVG:hover{
+    color: #46A358;
+}
+/* налаштування етикетки знижки */
+.discount{
+  background: #46A358;
+  position: absolute;
+  z-index: 1;  
+  top: 15px;  
+}
+.discount > span{
+    display: inline-block;
+    padding: 8px 6px;
+    color: #FFF;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 100% */
+}
+/* картинка продукту */
+.cardProduct img{
+    /* однакова ширина та висота для всіх продуктів */
+    width: 280px;
+    height: 280px;
+    /* фон */
+    background-color: #FBFBFB;
+
+    display: flex;
+    /* центруємо картинку */
+    align-items: center;       
+    justify-content: center;
+    /* ховає все, що вилізе за межі */  
+    overflow: hidden;
+
+    max-width: 100%;           
+    max-height: 100%;
+    /* щоб картинка не спотворювалася */             
+    object-fit: contain;
+}
+/* простір для іконок */
+.areaForIcon{
+    background: #FBFBFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7px;
+    position: relative;
+    /* трохи дамо вилізти на малюнок */
+    margin-top: -5px;
+}
+/* кластери для іконок */
+.areaForIcon > img{
+    height: 35px;
+    flex: 0 0 auto;
+}
+/* іконки */
+.icons{
+    position: absolute;
+    z-index: 1;
+
+    display: flex;
+    gap: 23px;    
+}
+/* робимо частину з іконками невидимою*/
+.areaForIcon img{
+    opacity: 0;
+    /* простір виділений тож можна використати даний ефект */
+    transition: opacity 700ms ease-in-out 20ms;
+}
+.areaForIcon svg{
+    opacity: 0;
+    /* простір виділений тож можна використати даний ефект */
+    transition: opacity 700ms ease-in-out 20ms;
+}
+
+.icons > svg{
+    /* обмежуємо зображення */
+    width: 24px;     
+    height: 24px;    
+    flex: 0 0 auto;
+}
+/* для назви продукта */
+.cardProduct span.nameProduct{   
+    padding-top: 12px;
+    padding-bottom: 6px;
+
+    color: #3D3D3D;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 100% */
+}
+/* для ціни продукта */
+.cardProduct span.priceProduct
+{
+    color: #46A358;    
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 88.889% */
+}
+.originalPrice{
+    color: #A5A5A5;
+    font-family: "Cera Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 88.889% */
+    text-decoration: line-through;
+}
+
+/* окремий блок для навігації по сторінкам */
+.pages{
+    /* для відступу від блоку магазину */
+    margin-right: 120px;
+    margin-bottom: 90px;
+    
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+/* кнопка сторінки */
+.page{
+    /* щоб вирівняти 1-цю з іншими цифрами */
+    min-width: 35px;
+    
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #E5E5E5;
+    background-color: white;    
+}
+.page span.number{
+    color: #3D3D3D;    
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px; /* 88.889% */   
+}
+/* кнопка обраної сторінки */
+.page.activePage{ 
+    padding: 10px;       
+    background-color: #46A358;
+    color: #FFF;           
+    font-weight: 700;    
+}
+
+
+/* додактовий блок ----------------------------------- */
+
+
+
+/* для загального контейнера */
+.otherInfoContainer{
+ padding: 69px 119px;
+
+ display: flex;
+ flex-direction: column;
+ gap: 135px;
+}
+/* верхній блок з картками*/
+.findMoreCards{
+ display: flex;
+ gap: 25px;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+/* опис картки */
+.findMoreCards > li{
+ padding: 40px 30px;
+ min-width: 580px;
+ display: flex;
+ background-color: #FBFBFB;
+}
+/* фіксований розмір для розміщення зображення */
+.areaForImage{
+ height: 180px;
+ width: 250px;
+}
+/* інформація в картці */
+.info{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ justify-content: space-between;
+}
+
+.findMoreCards > li h2{
+ color: #3D3D3D;
+ text-align: right; 
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 900;
+ line-height: 24px; /* 133.333% */
+ text-transform: uppercase;
+}
+
+.findMoreCards > li  p{
+ color: #727272;
+ text-align: right;
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 24px; /* 171.429% */
+/* потрібні відступи */
+ margin-top: 10px;
+ margin-bottom: 25px;
+}
+/* кнопка find more */
+.findMoreCards > li  button{
+ padding: 10px 27px;
+ border-radius: 6px;
+ display: block;
+ width: fit-content; 
+ background: #46A358;
+}
+/* текст всередині кнопки */
+.findMoreCards > li button > span{
+ color: #FFF;
+ font-family: "Cera Pro";
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 20px; /* 142.857% */
+}
+/* розміщення зображення у верхніх картках */
+.testWithPosition{
+ z-index: 1;
+ position: relative;
+ right: 50px;
+ bottom:80px;
+}
+
+/* нижній блок */
+.ourBlogPost{
+ flex-direction: column;
+}
+/* заголовок */
+.ourBlogPost > h1{
+ color: #3D3D3D;
+ text-align: center;
+ font-size: 30px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 25px; /* 53.333% */
+}
+/* підпис */
+.ourBlogPost > p{
+ color: #727272;
+ text-align: center;
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 24px; /* 171.429% */
+
+ padding-top: 15px;
+ padding-bottom: 30px;
+}
+/* для карток знизу */
+.blogCards{
+ display: flex;
+ justify-content: space-between;
+ gap: 40px;
+ flex-wrap: wrap;
+}
+.blogCards > li{
+ display: flex;
+ flex-direction: column;
+ background-color: #FBFBFB;
+ /* обмеження для нормального відображення 
+ елементів всередині картки*/
+ max-width: 260px;
+}
+.blogCards > li > img{ 
+ height: 200px;
+ display: flex;
+ /* центруємо картинку */
+ align-items: center;       
+ justify-content: center;
+ /* ховає все, що вилізе за межі */  
+ overflow: hidden;
+ max-width: 100%;           
+ max-height: 100%;
+ /* щоб картинка не спотворювалася */             
+ object-fit: contain;
+}
+/* блок інформації про подію */
+.eventInfo{
+ display: flex;
+ flex-direction: column;
+ padding: 9px 11px 13px 15px;
+ gap: 6px;
+}
+
+.blogCards > li span{
+ color: #46A358;
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 16px; /* 114.286% */
+}
+
+.blogCards > li h2{
+ color: #3D3D3D;
+ font-size: 20px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 26px; /* 130% */
+}
+
+.blogCards > li p{
+ color: #727272;
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 22px; /* 157.143% */
+}
+
+.blogCards > li a{
+ color: #3D3D3D;
+ font-family: "Cera Pro";
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 16px; /* 114.286% */
+}
+/* активне посилання */
+.blogCards > li a.active{
+ color: #46A358; 
+}
+
+
+/* низ сторінки */
+
+
+/* основний контейнер */
+.foot{
+ padding: 90px 120px 22px 120px;
+ display: flex;
+ flex-direction: column;
+ background-color: #FBFBFB;
+}
+
+/* верхній контейнер */
+.upFoot{
+ padding: 25px;
+ display: flex;
+ gap: 60px;
+}
+/* зміст верхнього контейнера */
+/* картка з дод інфою */
+.infoCardForFoot{
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+ justify-content: space-between;
+}
+/* блок із SVG зображенням */
+.plantImgFoot{
+ display: flex;
+ flex-direction: column;
+ position: relative;
+
+ max-height: 100px;
+}
+/* спроба прописати зображення через background*/
+.plantImgFoot1{
+ height: 100px;
+ background-image: url(../img/Ellipse\ 9.svg), url(../img/Framedown1.svg), url(../img/Frameup1.svg);
+ background-repeat: no-repeat, no-repeat, no-repeat;
+ background-position: left bottom, 15px bottom, 14px 5%;
+ background-size: auto 70%, auto 50%, auto 50%;
+}
+.plantImgFoot2{
+ height: 100px;
+ background-image: url(../img/Ellipse\ 9.svg), url(../img/Framedown2.svg), url(../img/Frameup2.svg);
+ background-repeat: no-repeat, no-repeat, no-repeat;
+ background-position: left bottom, 15px bottom, 25px 5%;
+ background-size: auto 70%, auto 50%, auto 50%;
+}
+.plantImgFoot3{
+ height: 100px;
+ background-image: url(../img/Ellipse\ 9.svg), url(../img/Framedown3.svg), url(../img/Frameup3.svg);
+ background-repeat: no-repeat, no-repeat, no-repeat;
+ background-position: left bottom, 1px bottom, 35px 10%;
+ background-size: auto 70%, auto 50%, auto 50%;
+}
+/* блок інфо після зображення */
+.infoFoot{
+ display: flex;
+ flex-direction: column;
+ gap: 9px;
+}
+.infoFoot > h3{
+ color: #3D3D3D;
+ font-size: 17px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 16px; /* 94.118% */
+}
+.infoFoot > p{
+ color: #727272;
+ font-family: "Cera Pro";
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 22px; /* 157.143% */
+}
+/* блок підписки на розсилку */
+.postSubscription{
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+}
+.postSubscription > h3{
+ color: #3D3D3D;
+ font-family: "Cera Pro";
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 16px; /* 88.889% */
+
+ padding-top: 13px;
+}
+/* блок вводу та затвердження підписки */
+.enterEmail{
+ display: flex;
+}
+/* ввід пошти */
+.postSubscription input{
+ border-radius: 6px;
+ background: #FFF;
+ box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+ width: 100%;
+ padding-left: 11px;
+
+ color: #000;
+ font-family: "Cera Pro";
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 16px; /* 114.286% */
+}
+.postSubscription input::placeholder{
+ color: #ACACAC;
+ font-family: "Cera Pro";
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 16px; /* 114.286% */
+}
+/* кнопка реєстрації на розсилку */
+.postSubscription button{
+ border-radius: 0 6px 6px 0;
+ background: #46A358;
+ max-width: 85px;
+ padding: 12px 25px;
+ cursor: pointer;
+
+ color: #FFF;
+ font-family: "Cera Pro";
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 16px; /* 88.889% */
+}
+/* дод інфо */
+.postSubscription p{
+ color: #727272;
+ font-size: 13px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 22px; /* 169.231% */
+}
+
+
+/* середній котейнер */
+.middleFoot{
+ padding: 25px 23px;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ align-items: center;
+ background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
+}
+/* трохи змінюємо градієнт при наведені */
+.middleFoot:hover{
+ background: linear-gradient(90deg, #EDF6EF 0%, #52C368 15%, #EDF6EF 100%);
+}
+/* блоки з контак.інфо */
+.contactInfo{
+ display: flex;
+ align-items: center;
+ gap: 9px;
+}
+.contactInfo > p{
+ color: #3D3D3D;
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 22px; /* 157.143% */
+ 
+ max-width: 175px;
+}
+
+
+/* нижній котейнер */
+.downFoot{
+ padding: 30px 25px 30px 25px;
+
+ display: flex;
+ gap: 155px;
+ /* робимо лінію знизу */
+ border-bottom: 1px solid #46a35833;
+ justify-content: space-between;
+}
+/* блок з дод.інфо */
+.moreInfo{
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+}
+.moreInfo > span{
+ color: #3D3D3D;
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 16px; /* 88.889% */
+ user-select: none;
+}
+.moreInfo li{
+ color: #3D3D3D;
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 30px; /* 214.286% */
+ /* ефект наведення */
+ cursor: pointer;
+ user-select: none;
+}
+/* зміна шрифту при наведенні */
+.moreInfo li:hover{
+ color: #46A358;
+ font-style: normal;
+ font-weight: 500; 
+}
+/* блок з соц.мережами та іншим*/
+.socialMediaAndOther{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+
+ padding-bottom: 15px;
+ flex-grow: 1;
+}
+.socialMediaAndOther span{
+ color: #3D3D3D;
+ font-family: "Cera Pro";
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 16px; /* 88.889% */
+}
+/* іконки */
+.mediaIcons{
+ display: flex;
+ gap: 10px;
+}
+/* трохи змінюємо колір іконок для ефекту наведення */
+.mediaIcons > a > svg:hover path{
+ fill:#52C368;
+}
+/* зображення підтримки платежів */
+.socialMediaAndOther img{
+ max-width: 200px;
+}
+/* кінець сторінки */
+.footer{
+ padding-top: 6px;
+
+ color: #3D3D3D;
+ font-family: "Cera Pro";
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 30px; /* 214.286% */
+ text-align: center;
+}
+
+.iconSVG:hover  #heart {
+    fill: #46A358;
 }

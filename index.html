@@ -1,140 +1,636 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
- <title>Document</title>
- <link rel="stylesheet" href="./styles/reset.css">
- <link rel="stylesheet" href="./styles/fontsStyle.css">
- <link rel="stylesheet" href="./styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/fontsStyle.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
-<!-- основа -->
-<div class="container">
-  <!-- налаштовуємо верх сторінки -->
-  <header class="header">
-    <!-- додаємо лого -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="35" viewBox="0 0 150 35" fill="none">
-      <g clip-path="url(#clip0_4_2438)">
-        <path d="M17.15 0C7.67748 0 0 7.67746 0 17.15C0 26.0201 6.73548 33.3175 15.3711 34.207C14.8496 29.9134 15.0436 26.4001 15.7067 23.5135C15.3347 21.7225 14.4898 19.0703 12.5734 17.1864C12.5734 17.1864 13.8348 19.0784 14.5181 21.6214C14.5181 21.6255 14.5221 21.6295 14.5221 21.6335C14.5949 21.9044 14.6596 22.1793 14.7162 22.4623C14.7283 22.527 14.7404 22.5917 14.7526 22.6604C14.8051 22.9515 14.8536 23.2426 14.886 23.5418C5.19513 22.3532 3.12921 13.6569 3.35561 10.3781C13.665 10.9482 15.7754 17.8292 16.0827 22.0985C19.4585 11.0412 30.1843 10.4024 31.0697 10.3781C31.4538 18.8763 25.1509 25.5026 17.6149 26.0807C17.6635 25.8503 17.7201 25.6198 17.7767 25.3934C17.7928 25.3247 17.813 25.26 17.8333 25.1913C17.8777 25.0296 17.9222 24.8679 17.9748 24.7061C17.995 24.6374 18.0192 24.5646 18.0394 24.4959C18.096 24.318 18.1567 24.1442 18.2173 23.9663C18.2335 23.9259 18.2456 23.8854 18.2618 23.845C18.3386 23.6348 18.4195 23.4326 18.5003 23.2305C18.5084 23.2143 18.5125 23.1941 18.5205 23.1779C18.5205 23.1779 18.5205 23.1779 18.5246 23.1779C20.4571 18.5043 24.0229 15.4439 24.0229 15.4439C17.0247 19.4868 15.8441 29.9983 15.6582 34.2231C16.1514 34.2676 16.6446 34.2999 17.15 34.2999C26.6225 34.2999 34.3 26.6225 34.3 17.15C34.3 7.67746 26.6225 0 17.15 0Z" fill="#46A358"/>
-        <path d="M46.7037 10.7454C48.9718 10.7454 50.8235 11.7197 52.0242 13.4986L49.7764 15.4109C48.9718 14.287 47.9975 13.7048 46.6471 13.7048C44.5691 13.7048 43.2753 15.0713 43.2753 17.1534C43.2753 19.2719 44.6418 20.695 46.8372 20.695C48.0177 20.695 48.9556 20.2826 49.554 19.5912V19.0091H46.6673V16.2356H52.7762V20.133C52.194 21.1639 51.3693 21.9887 50.3019 22.6234C49.2346 23.242 48.0339 23.5614 46.7037 23.5614C42.9923 23.618 39.9237 20.7313 39.9763 17.1534C39.9197 13.5956 42.9923 10.6888 46.7037 10.7454Z" fill="#46A358"/>
-        <path d="M61.9576 23.3316L59.168 19.4908H57.8379V23.3316H54.6157V10.9684H59.4672C62.2204 10.9684 64.2459 12.6543 64.2459 15.2215C64.2459 16.7376 63.5141 17.995 62.2972 18.7429L65.5558 23.3316H61.9576ZM57.8338 16.681H59.4833C60.3809 16.681 60.963 16.0988 60.963 15.2215C60.963 14.3442 60.3809 13.7782 59.4833 13.7782H57.8338V16.681Z" fill="#46A358"/>
-        <path d="M66.8333 10.9684H75.4124V13.8712H70.0555V15.5773H73.876V18.2739H70.0555V20.4288H75.6388V23.3316H66.8333V10.9684Z" fill="#46A358"/>
-        <path d="M77.6441 10.9684H86.2231V13.8712H80.8663V15.5773H84.6868V18.2739H80.8663V20.4288H86.4495V23.3316H77.6441V10.9684Z" fill="#46A358"/>
-        <path d="M99.4192 10.9683V23.5579H98.3882L91.681 17.057V23.3315H88.4588V10.7419H89.4897L96.197 17.1499V10.9683H99.4192Z" fill="#46A358"/>
-        <path d="M103.264 19.135C103.996 20.1094 104.764 20.7279 106.017 20.7279C106.862 20.7279 107.291 20.4288 107.291 19.8264C107.291 19.2846 107.008 19.1148 106.033 18.6822L104.76 18.1203C102.718 17.2187 101.631 16.0584 101.631 14.3927C101.631 12.2014 103.43 10.7379 105.957 10.7379C107.998 10.7379 109.442 11.7123 110.19 13.2283L108.035 14.8778C107.436 13.9803 106.874 13.5679 105.993 13.5679C105.318 13.5679 104.889 13.8307 104.889 14.3563C104.889 14.8051 105.152 15.0517 105.957 15.367L107.38 15.9654C109.535 16.867 110.545 17.9505 110.545 19.6929C110.545 22.0904 108.576 23.5539 106.009 23.5539C103.782 23.5539 101.982 22.4866 101.081 20.7805L103.264 19.135Z" fill="#46A358"/>
-        <path d="M112.393 10.9684H115.615V15.4843H120.131V10.9684H123.353V23.3316H120.131V18.3871H115.615V23.3316H112.393V10.9684Z" fill="#46A358"/>
-        <path d="M131.843 10.7419C135.441 10.6651 138.607 13.6084 138.53 17.1499C138.603 20.7279 135.441 23.6145 131.843 23.5579C128.229 23.6145 125.116 20.7279 125.193 17.1499C125.116 13.6084 128.229 10.6692 131.843 10.7419ZM131.859 13.7014C129.874 13.7014 128.488 15.1083 128.488 17.1499C128.488 18.1809 128.807 19.0218 129.426 19.6606C130.044 20.2791 130.869 20.5985 131.859 20.5985C133.772 20.5985 135.231 19.2118 135.231 17.1499C135.235 15.1083 133.772 13.7014 131.859 13.7014Z" fill="#46A358"/>
-        <path d="M140.374 10.9684H145.226C147.979 10.9684 150.004 12.6543 150.004 15.2215C150.004 17.7524 147.926 19.4908 145.226 19.4908H143.596V23.3316H140.374V10.9684ZM145.242 16.681C146.139 16.681 146.721 16.0988 146.721 15.2215C146.721 14.3442 146.139 13.7782 145.242 13.7782H143.592V16.681H145.242Z" fill="#46A358"/>
-      </g>
-      <defs>
-        <clipPath id="clip0_4_2438">
-          <rect width="150" height="34.2999" fill="white"/>
-        </clipPath>
-      </defs>
-    </svg>
-    <!-- додаємо навігацію -->
-    <nav class="list">
-      <li class="list-item">Home</li>
-      <li class="list-item">Shop</li>
-      <!-- створюємо 1 підменю -->
-      <li class="list-item withMenu">
-        Plant Care
-        <ul class="firstLevel">
-          <li class="firstLevelVal">
-            <div>
-              <span>Drainage</span>
+  <!-- основа -->
+  <div class="container">
+    <!-- налаштовуємо верх сторінки -->
+    <header class="header">
+      <!-- додаємо лого -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="150" height="35" viewBox="0 0 150 35" fill="none">
+        <use href="sprites.svg#logoGreenShop" x="0" y="0"></use>   
+      </svg>
+      <!-- додаємо навігацію -->
+      <nav class="list">
+        <li class="list-item">Home</li>
+        <li class="list-item">Shop</li>
+        <!-- створюємо 1 підменю -->
+        <li class="list-item withMenu">
+          Plant Care
+          <ul class="firstLevel">
+            <li class="firstLevelVal">
+              <div>
+                <span>Drainage</span>
+              </div>
+            </li>
+            <li class="firstLevelVal">
+              <div>
+                <span>Fungicides</span>
+              </div>
+            </li>
+            <li class="firstLevelVal">
+              <div>
+                <span>Fertilizer</span>
+              </div>
+            </li>
+            <!-- вихід на друге підменю -->
+            <li class="firstLevelVal mayBeUsed">
+              <div>
+                <span class="label">Priming</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-default" width="6" height="10" viewBox="0 0 6 10"
+                  fill="none">
+                  <path
+                    d="M0.175481 0.945805C-0.0577829 0.730097 -0.0585955 0.379612 0.173666 0.162973C0.384812 -0.0339699 0.715893 -0.0524979 0.949599 0.107825L1.01657 0.161288L5.82452 4.60737C6.03721 4.80406 6.05656 5.11265 5.88256 5.32969L5.82455 5.39186L1.01661 9.83868C0.783363 10.0544 0.405981 10.0537 0.1737 9.83706C-0.0374635 9.64013 -0.0560146 9.33257 0.117598 9.1162L0.175446 9.05423L4.55905 4.99941L0.175481 0.945805Z"
+                    fill="#3D3D3D" />
+                </svg>
+              </div>
+              <!-- друге підменю -->
+              <ul class="secondLevel">
+                <li class="secondLevelVal">
+                  <div>
+                    <span>Universal</span>
+                  </div>
+                </li>
+                <li class="secondLevelVal">
+                  <div>
+                    <span>For Ficus</span>
+                  </div>
+                </li>
+                <li class="secondLevelVal">
+                  <div>
+                    <span>For Cacti</span>
+                  </div>
+                </li>
+                <li class="secondLevelVal">
+                  <div>
+                    <span>For Citrus</span>
+                  </div>
+                </li>
+                <li class="secondLevelVal">
+                  <div>
+                    <span>For those in bloom</span>
+                  </div>
+                </li>
+                <li class="secondLevelVal">
+                  <div>
+                    <span>For Orchids</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-item">Blogs</li>
+      </nav>
+      <!-- кнопка реєстрації -->
+      <dutton class="btnlogin" onclick="window.location.href = 'registration.html'">
+        <img src="./svgCollection/login.svg" alt="login">
+        Login
+      </dutton>
+    </header>
+    <!-- додаємо основний постер -->
+    <main class="main">
+      <div class="leftPart">
+        <!-- текстове повідомлення -->
+        <span class="welcomer">Welcome to GreenShop</span>
+        <h1 class="bigletter">Let’s Make a
+          Better <span class="greenBoy">Planet</span>
+        </h1>
+        <p>
+          We are an online plant shop offering a wide range of cheap and trendy plants.
+          Use our plants to create an unique Urban Jungle. Order your favorite plants!
+        </p>
+        <!-- кнопка шопінгу -->
+        <button class="shopnow">
+          Shop Now
+        </button>
+      </div>
+      <!-- зображення -->
+      <div class="rightPart">
+        <img src="./img/forHeader/bigPlant.png" alt="bigPlant">
+        <img src="./img/forHeader/smallPlant.png" alt="smallPlant" class="smallPlant">
+      </div>
+    </main>
+  </div>
+  <!-- загальний блок магазина -->
+  <div class="containerForShopContent">
+    <!-- лівий блок -->
+    <div class="leftShopPanel">
+      <!-- категорії магазину -->
+      <div class="categoriesPanel">
+        <nav class="categories">
+          <span class="infoCat">Categories</span>
+          <li class="categori">House Plants</li>
+          <li class="categori">Potter Plants</li>
+          <li class="categori">Seeds</li>
+          <li class="categori">Small Plants</li>
+          <li class="categori">Big Plants</li>
+          <li class="categori">Succulents</li>
+          <li class="categori">Trerrariums</li>
+          <li class="categori">Gardening</li>
+          <li class="categori">Accessories</li>
+        </nav>
+      </div>
+      <!-- реклама розпродажу -->
+      <div class="imgBigSale">
+        <span class="superSale">Super Sale</span>
+        <span class="discountForImage">UP TO 75% OFF</span>
+        <img src="./img/forShop/image 12.png" alt="BigSale">
+        <div class="decoration1"></div>
+        <div class="decoration2"></div>
+        <div class="decoration3"></div>
+      </div>
+    </div>
+
+    <!-- правий блок -->
+    <div class="rightShopPanel">
+      <!-- верхнє меню -->
+      <div class="navANDsort">
+        <nav class="navShop">
+          <li class="shopCat">All Plants</li>
+          <li class="shopCat">New Arrivals</li>
+          <li class="shopCat">Sale</li>
+        </nav>
+        <div class="sort">
+          Sort by: Default Sorting ↓
+        </div>
+      </div>
+      <!-- магазин -->
+      <div class="shop">
+        <!-- картка товару -->
+        <li class="cardProduct">
+          <!-- малюнок товару -->
+          <img src="./img/forShop/image 1.png" alt="plants1" class="shopImages">
+          <div class="areaForIcon">
+            <!-- фон для іконок -->
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <!-- іконки -->
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0" fill="#46A358" />               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
             </div>
-          </li>
-          <li class="firstLevelVal">
-            <div>
-              <span>Fungicides</span>
+          </div>
+          <!-- назва товару -->
+          <span class="nameProduct">Barbeton Daisy</span>
+          <!-- ціна товару -->
+          <span class="priceProduct">$119.00</span>
+        </li>
+        <li class="cardProduct">
+          <img src="./img/forShop/product-21-320x320 1.png" alt="plants2" class="shopImages">
+          <div class="areaForIcon">
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0"></use>               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
             </div>
-          </li>
-          <li class="firstLevelVal">
-            <div>
-              <span>Fertilizer</span>
+          </div>
+          <span class="nameProduct">Angel Wing Begonia</span>
+          <span class="priceProduct">$169.00</span>
+        </li>
+        <li class="cardProduct discountproduct">
+          <div class="discount"><span>13% OFF</span></div>
+          <img src="./img/forShop/image 2.png" alt="plants3" class="shopImages">
+          <div class="areaForIcon">
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0"></use>               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
             </div>
-          </li>
-          <!-- вихід на друге підменю -->
-          <li class="firstLevelVal mayBeUsed">
-            <div>
-              <span class="label">Priming</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon-default" width="6" height="10" viewBox="0 0 6 10" fill="none">
-              <path d="M0.175481 0.945805C-0.0577829 0.730097 -0.0585955 0.379612 0.173666 0.162973C0.384812 -0.0339699 0.715893 -0.0524979 0.949599 0.107825L1.01657 0.161288L5.82452 4.60737C6.03721 4.80406 6.05656 5.11265 5.88256 5.32969L5.82455 5.39186L1.01661 9.83868C0.783363 10.0544 0.405981 10.0537 0.1737 9.83706C-0.0374635 9.64013 -0.0560146 9.33257 0.117598 9.1162L0.175446 9.05423L4.55905 4.99941L0.175481 0.945805Z" fill="#3D3D3D"/>
-              </svg>                             
+          </div>
+          <span class="nameProduct">African Violet</span>
+          <span class="priceProduct">$199.00 <span class="originalPrice">$229.00</span></span>
+        </li>
+        <li class="cardProduct">
+          <img src="./img/forShop/01 3.png" alt="plants4" class="shopImages">
+          <div class="areaForIcon">
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0"></use>               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
             </div>
-            <!-- друге підменю -->
-            <ul class="secondLevel">
-              <li class="secondLevelVal">
-                <div>
-                  <span>Universal</span>
-                </div>
-              </li>
-              <li class="secondLevelVal">
-                <div>
-                  <span>For Ficus</span>
-                </div>
-              </li>
-              <li class="secondLevelVal">
-                <div>
-                  <span>For Cacti</span>
-                </div>
-              </li>
-              <li class="secondLevelVal">
-                <div>
-                  <span>For Citrus</span>
-                </div>
-              </li>
-              <li class="secondLevelVal">
-                <div>
-                  <span>For those in bloom</span>
-                </div>
-              </li>
-              <li class="secondLevelVal">
-                <div>
-                  <span>For Orchids</span>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          </div>
+          <span class="nameProduct">Beach Spider Lily</span>
+          <span class="priceProduct">$129.00</span>
+        </li>
+        <li class="cardProduct">
+          <img src="./img/forShop/image 7.png" alt="plants5" class="shopImages">
+          <div class="areaForIcon">
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0"></use>               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
+            </div>
+          </div>
+          <span class="nameProduct">Blushing Bromeliad</span>
+          <span class="priceProduct">$139.00</span>
+        </li>
+        <li class="cardProduct">
+          <img src="./img/forShop/image 8.png" alt="plants6" class="shopImages">
+          <div class="areaForIcon">
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0"></use>               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
+            </div>
+          </div>
+          <span class="nameProduct">Aluminum Plant</span>
+          <span class="priceProduct">$179.00</span>
+        </li>
+        <li class="cardProduct">
+          <img src="./img/forShop/image 9.png" alt="plants7" class="shopImages">
+          <div class="areaForIcon">
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0"></use>               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
+            </div>
+          </div>
+          <span class="nameProduct">Bird's Nest Fern</span>
+          <span class="priceProduct">$99.00</span>
+        </li>
+        <li class="cardProduct">
+          <img src="./img/forShop/product-20-320x320 1.png" alt="plants8" class="shopImages">
+          <div class="areaForIcon">
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0"></use>               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
+            </div>
+          </div>
+          <span class="nameProduct">Broadleaf Lady Palm</span>
+          <span class="priceProduct">$59.00</span>
+        </li>
+        <li class="cardProduct">
+          <img src="./img/forShop/image 10.png" alt="plants9" class="shopImages">
+          <div class="areaForIcon">
+            <img src="./svgCollection/Group 5.svg" alt="iconGroup" class="iconGroup">
+            <div class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vectorForShop" x="0" y="0"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#heart" x="0" y="0"></use>               
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">                
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+              </svg>
+            </div>
+          </div>
+          <span class="nameProduct">Chinese Evergreen</span>
+          <span class="priceProduct">$39.00</span>
+        </li>
+      </div>
+    </div>
+  </div>
+  <!-- окремий блок з навігацією по сторінкам -->
+  <div class="pages">
+    <button class="page activePage">1</button>
+    <button class="page"><span class="number">2</span></button>
+    <button class="page"><span class="number">3</span></button>
+    <button class="page"><span class="number">4</span></button>
+    <button class="page"><span class="number">></span></button>
+  </div>
+
+  <!-- загальний контейнер -->
+  <div class="otherInfoContainer">
+    <!-- верхній блок з картками -->
+    <div class="findMoreCards">
+      <!-- перша картка -->
+      <li>
+        <!-- простір для зображення, проба position -->
+        <div class="areaForImage">
+          <!-- зображення -->
+          <img src="./img/forBlogsAndOther/image 14.png" alt="plant" class="testWithPosition">
+        </div>
+        <!-- блок з інфо -->
+        <div class="info">
+          <h2>Summer cactus <br>& succulents</h2>
+          <p>We are an online plant shop offering a wide <br> range of cheap and trendy plants</p>
+          <button>
+            <span>Find More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
+              <use href="sprites.svg#arrow-right" x="0" y="0"></use>
+            </svg>            
+          </button>
+        </div>
+        <!-- друга картка -->
       </li>
-      <li class="list-item">Blogs</li>
-    </nav>
-    <!-- кнопка реєстрації -->
-    <dutton class="btnlogin"
-    onclick="window.location.href = 'registration.html'">
-      <img src="./svgCollection/login.svg" alt="login">
-      Login
-    </dutton>
-  </header>
-  <!-- додаємо основний постер -->
-  <main class="main">
-    <div class="leftPart">
-      <!-- текстове повідомлення -->
-      <span class="welcomer">Welcome to GreenShop</span>
-      <h1 class="bigletter">Let’s Make a
-        Better <span class="greenBoy">Planet</span>
-      </h1>
-      <p>
-        We are an online plant shop offering a wide range of cheap and trendy plants. 
-        Use our plants to create an unique Urban Jungle. Order your favorite plants!
-      </p>
-      <!-- кнопка шопінгу -->
-      <button class="shopnow">
-        Shop Now
-      </button>
-    </div>    
-    <!-- зображення -->
-     <div class="rightPart">
-      <img src="./img/forHeader/bigPlant.png" alt="bigPlant">
-      <img src="./img/forHeader/smallPlant.png" alt="smallPlant" class="smallPlant">
-     </div>    
-  </main>
-</div>
+      <li>
+        <div class="areaForImage">
+          <img src="./img/forBlogsAndOther/image 15.png" alt="plant" class="testWithPosition">
+        </div>
+        <div class="info">
+          <h2>Styling Trends <br>& much more</h2>
+          <p>We are an online plant shop offering a wide <br>range of cheap and trendy plants</p>
+          <button>
+            <span>Find More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" fill="none">
+              <use href="sprites.svg#arrow-right" x="0" y="0"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+    </div>
+
+    <!-- нижній блок -->
+    <div class="ourBlogPost">
+      <h1 class="blog">Our Blog Posts</h1>
+      <p class="blogMessage">We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+      <!-- нижній блок з картками -->
+      <div class="blogCards">
+        <!-- блок картки -->
+        <li>
+          <!-- зображення події -->
+          <img src="./img/forBlogsAndOther/01.png" alt="plant" class="imgBlogsPlants">
+          <!-- блок інформації про подію -->
+          <div class="eventInfo">
+            <span>September 12 I Read in 6 minutes</span>
+            <h2>Cactus & Succulent Care Tips</h2>
+            <p>Cacti are succulents are easy care plants for any home or patio. </p>
+            <a href="#">Read More ⭢</a>
+          </div>
+        </li>
+        <li>
+          <img src="./img/forBlogsAndOther/02.png" alt="plant">
+          <div class="eventInfo">
+            <span>September 13 I Read in 2 minutes</span>
+            <h2>Top 10 Succulents for Your Home</h2>
+            <p>Best in hanging baskets. Prefers medium to high light.</p>
+            <a href="#">Read More ⭢</a>
+          </div>
+        </li>
+        <li>
+          <img src="./img/forBlogsAndOther/03.png" alt="plant">
+          <div class="eventInfo">
+            <span>September 15 I Read in 3 minutes</span>
+            <h2>Cacti & Succulent Care Tips</h2>
+            <p>Cacti and succulents thrive in containers and because most are.</p>
+            <a href="#" class="active">Read More ⭢</a>
+          </div>
+        </li>
+        <li>
+          <img src="./img/forBlogsAndOther/04.png" alt="plant">
+          <div class="eventInfo">
+            <span>September 15 I Read in 2 minutes</span>
+            <h2>Best Houseplants Room by Room</h2>
+            <p>The benefits of houseplants are endless. In addition to..</p>
+            <a href="#">Read More ⭢</a>
+          </div>
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <!-- верх -->
+    <div class="upFoot">
+      <!-- картка з інформацією -->
+      <div class="infoCardForFoot">
+        <!-- зображення SVG рослин -->
+        <div class="plantImgFoot1"></div>
+        <!-- текстова інформація -->
+        <div class="infoFoot">
+          <h3>Garden Care</h3>
+          <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+        </div>
+      </div>
+      <div class="infoCardForFoot">
+        <div class="plantImgFoot2"></div>
+        <div class="infoFoot">
+          <h3>Plant Renovation</h3>
+          <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+        </div>
+      </div>
+      <div class="infoCardForFoot">
+        <div class="plantImgFoot3"></div>
+        <div class="infoFoot">
+          <h3>Watering Graden</h3>
+          <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+        </div>
+      </div>
+      <!-- блок реєстраці пошти на розсилку -->
+      <div class="postSubscription">
+        <h3>Would you like to join newsletters?</h3>
+        <div class="enterEmail">
+          <!-- ввід пошти -->
+          <input type="email" placeholder="enter your email address...">
+          <!-- кнопка реєстрації пошти -->
+          <button class="join" type="submit" onclick="alert('Пошта зареєстрована')">
+            Join
+          </button>
+        </div>
+        <p>
+          We usually post offers and challenges in newsletter. We’re your online houseplant destination.
+          We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!
+        </p>
+      </div>
+    </div>
+
+    <!-- середина -->
+    <div class="middleFoot">
+      <!-- логотип -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="150" height="35" viewBox="0 0 150 35" fill="none">
+        <use href="sprites.svg#logoGreenShop" x="0" y="0"></use>   
+      </svg>
+      <!-- блок з окремою контактною інформаціією -->
+      <div class="contactInfo">
+        <!-- помилання на гугл карту -->
+        <a href="https://maps.app.goo.gl/RVkh71yn5iBgsvbD8" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
+            <use href="sprites.svg#location" x="0" y="0"></use>
+          </svg>
+        </a>
+        <p>
+          70 West Buckingham Ave.
+          Farmingdale, NY 11735
+        </p>
+      </div>
+      <div class="contactInfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+          <use href="sprites.svg#message" x="0" y="0"></use>
+        </svg>
+        <p>
+          contact@greenshop.com
+        </p>
+      </div>
+      <div class="contactInfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use href="sprites.svg#calling" x="0" y="0"></use>
+        </svg>
+        <p>+88 01911 717 490</p>
+      </div>
+    </div>
+
+    <!-- низ -->
+    <div class="downFoot">
+      <div class="moreInfo">
+        <span>My Account</span>
+        <ul>
+          <li>My Account</li>
+          <li>Our stores</li>
+          <li>Contact us</li>
+          <li>Career</li>
+          <li>Specials</li>
+        </ul>
+      </div>
+      <div class="moreInfo">
+        <span>Help & Guide</span>
+        <ul>
+          <li>Help Center</li>
+          <li>How to Buy</li>
+          <li>Shipping & Delivery</li>
+          <li>Product Policy</li>
+          <li>How to Return</li>
+        </ul>
+      </div>
+      <div class="moreInfo">
+        <span>Categories</span>
+        <ul>
+          <li>House Plants</li>
+          <li>Potter Plants</li>
+          <li>Seeds</li>
+          <li>Small Plants</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+      <!-- оремо про соціальні мережі й інше -->
+      <div class="socialMediaAndOther">
+        <span>Social Media</span>
+        <div class="mediaIcons">
+          <!-- посилання на соціальну мережу -->
+          <a href="https://facebook.com" target="_blank">
+            <!-- іконка мережі -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <use href="sprites.svg#facebook" x="0" y="0"></use>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <use href="sprites.svg#insta" x="0" y="0"></use>
+            </svg>
+          </a>
+          <a href="https://x.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <use href="sprites.svg#X" x="0" y="0"></use>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <use href="sprites.svg#linkD" x="0" y="0"></use>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <use href="sprites.svg#YT" x="0" y="0"></use>
+            </svg>
+          </a>
+        </div>
+        <span>We accept</span>
+        <img src="./img/1e460c89ee17b2b09a69f96d2552ed3b0b04ac05.png" alt="iNeedYormoney">
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2021 GreenShop. All Rights Reserved.</p>
+    </div>
+  </div>
+
 </body>
+
 </html>
