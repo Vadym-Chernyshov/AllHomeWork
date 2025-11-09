@@ -96,11 +96,28 @@
         </li>
         <li class="list-item">Blogs</li>
       </nav>
-      <!-- кнопка реєстрації -->
-      <dutton class="btnlogin" onclick="window.location.href = 'registration.html'">
-        <img src="./svgCollection/login.svg" alt="login">
-        Login
-      </dutton>
+      <div class="headerRightElements">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#vector" x="0" y="0"></use>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="iconSVG">
+                <use href="sprites.svg#shopping" x="0" y="0"></use>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+        class = "countShoppedItems">
+          <circle cx="8" cy="8" r="7" fill="#46A358" stroke="white" stroke-width="2"/>
+          <text x="8" y="8" fill="#FFF" font-size="3px" font-weight="300"
+                text-anchor="middle" dominant-baseline="middle" font-family="Cera Pro">
+          6
+          </text>
+        </svg>
+        <button class="btnlogin" onclick="window.location.href = 'reg.html'">
+          <img src="./svgCollection/login.svg" alt="login">
+          Login
+        </button>
+      </div>      
     </header>
     <!-- додаємо основний постер -->
     <main class="main">
@@ -133,16 +150,90 @@
       <!-- категорії магазину -->
       <div class="categoriesPanel">
         <nav class="categories">
-          <span class="infoCat">Categories</span>
-          <li class="categori">House Plants</li>
-          <li class="categori">Potter Plants</li>
-          <li class="categori">Seeds</li>
-          <li class="categori">Small Plants</li>
-          <li class="categori">Big Plants</li>
-          <li class="categori">Succulents</li>
-          <li class="categori">Trerrariums</li>
-          <li class="categori">Gardening</li>
-          <li class="categori">Accessories</li>
+          <ul>
+            <span class="infoCat">Categories</span>
+            <li class="categori">
+              <span class="cat-name active">House Plants</span>
+              <span class="cat-count">(33)</span>
+            </li>
+            <li class="categori">
+              <span class="cat-name active">Potter Plants</span>
+              <span class="cat-count">(12)</span>
+            </li>
+            <li class="categori">
+              <span class="cat-name active">Seeds</span>
+              <span class="cat-count">(65)</span>
+            </li>
+            <li class="categori">
+              <span class="cat-name active">Small Plants</span>
+              <span class="cat-count">(39)</span>
+            </li>
+            <li class="categori">
+              <span class="cat-name active">Big Plants</span>
+              <span class="cat-count">(23)</span>
+            </li>
+            <li class="categori">
+              <span class="cat-name active">Succulents</span>
+              <span class="cat-count">(17)</span>
+            </li>
+            <li class="categori">
+              <span class="cat-name active">Terrariums</span>
+              <span class="cat-count">(19)</span>
+            </li>
+            <li class="categori">
+              <span class="cat-name active">Gardening</span>
+              <span class="cat-count">(13)</span>
+            </li>
+            <li class="categori">
+              <span class="cat-name active">Accessories</span>
+              <span class="cat-count">(18)</span>
+            </li>
+          </ul>          
+        </nav>
+        <div class="priceRange">
+          <h3>Price Range</h3>
+          <div class="slider-wrapper">
+            <input type="range" min="0" max="100" value="40" class="slider" id="myRange">
+          </div>
+          <script>
+            const slider = document.getElementById('myRange');
+            function updateSliderBackground(el) {
+              const min = Number(el.min) || 0;
+              const max = Number(el.max) || 100;
+              const val = Number(el.value);
+              const percent = ((val - min) * 100) / (max - min);
+              el.style.setProperty('--range-progress', `${percent}%`);
+            }
+            updateSliderBackground(slider);
+
+            slider.addEventListener('input', function () {
+              updateSliderBackground(this);
+            });
+          </script>
+          <div class="moneyRange">
+            <span>Price:</span>
+            <span class="money"> $39 - $1230</span>
+          </div>
+          <button class="filterButton" onclick="window.location.href = 'reg.html'">
+            Filter
+          </button>         
+        </div>
+        <nav class="categories">
+          <ul>
+            <span class="infoCat" >Size</span>
+            <li class="categori">
+              <span>Small</span>
+              <span>(119)</span>
+            </li>
+            <li class="categori">
+              <span>Medium</span>
+              <span>(86)</span>
+            </li>
+            <li class="categori">
+              <span >Large</span>
+              <span>(78)</span>
+            </li>
+          </ul>
         </nav>
       </div>
       <!-- реклама розпродажу -->
@@ -186,7 +277,7 @@
               </svg>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 class="iconSVG">
-                <use href="sprites.svg#heart" x="0" y="0" fill="#46A358" />               
+                <use href="sprites.svg#heart" x="0" y="0"/>               
               </svg>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 class="iconSVG">                
@@ -385,7 +476,11 @@
     <button class="page"><span class="number">2</span></button>
     <button class="page"><span class="number">3</span></button>
     <button class="page"><span class="number">4</span></button>
-    <button class="page"><span class="number">></span></button>
+    <button class="page"><span class="number">
+      <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+      <path d="M0.75 0.75C0.75 0.75 6 3.858 6 6C6 8.14125 0.75 11.25 0.75 11.25" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span></button>
   </div>
 
   <!-- загальний контейнер -->
@@ -630,7 +725,5 @@
       <p>© 2021 GreenShop. All Rights Reserved.</p>
     </div>
   </div>
-
 </body>
-
 </html>
