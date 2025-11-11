@@ -13,9 +13,31 @@
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/fontsStyle.css">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/preloader.css">
 </head>
 
 <body>
+  <!-- підключаємо преоладер -->
+  <div id="preloader" class="preloader" role="status" aria-live="polite">
+    <div style="text-align:center">
+      <div class="loader" aria-hidden="true"></div>
+    </div>
+  </div>
+  <!-- скрипт для прелоадера -->
+  <script>
+    // Показати прелоадер при завантаженні документа і сховати через ~3 секунди.
+    document.addEventListener('DOMContentLoaded', function () {
+      const preloader = document.getElementById('preloader');
+      const page = document.getElementById('page');
+      // Тривалість прелоадера в мілісекундах
+      const timeout = 3000;
+      // Показати сторінку після таймауту
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+        page.classList.add('visible');
+      }, timeout);
+    });
+  </script>
   <!-- основа -->
   <div class="container">
     <!-- налаштовуємо верх сторінки -->
@@ -152,41 +174,77 @@
         <nav class="categories">
           <ul>
             <span class="infoCat">Categories</span>
+            <!-- (33)
+(12)
+(65)
+(39)
+(23)
+(17)
+(19)
+(13)
+(18) -->
             <li class="categori">
-              <span class="cat-name active">House Plants</span>
-              <span class="cat-count">(33)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="house">
+                 <span class="categori__name">House Plants</span>
+                 <span class="categori__count">(33)</span>
+              </label>
             </li>
             <li class="categori">
-              <span class="cat-name active">Potter Plants</span>
-              <span class="cat-count">(12)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="potter">
+                 <span class="categori__name">Potter Plants</span>
+                 <span class="categori__count">(12)</span>
+              </label>
             </li>
             <li class="categori">
-              <span class="cat-name active">Seeds</span>
-              <span class="cat-count">(65)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="seeds">
+                 <span class="categori__name">Seeds</span>
+                 <span class="categori__count">(65)</span>
+              </label>
             </li>
             <li class="categori">
-              <span class="cat-name active">Small Plants</span>
-              <span class="cat-count">(39)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="small">
+                 <span class="categori__name">Small Plants</span>
+                 <span class="categori__count">(39)</span>
+              </label>
             </li>
             <li class="categori">
-              <span class="cat-name active">Big Plants</span>
-              <span class="cat-count">(23)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="big">
+                 <span class="categori__name">Big Plants</span>
+                 <span class="categori__count">(23)</span>
+              </label>
             </li>
             <li class="categori">
-              <span class="cat-name active">Succulents</span>
-              <span class="cat-count">(17)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="suc">
+                 <span class="categori__name">Succulents</span>
+                 <span class="categori__count">(17)</span>
+              </label>
             </li>
             <li class="categori">
-              <span class="cat-name active">Terrariums</span>
-              <span class="cat-count">(19)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="tre">
+                 <span class="categori__name">Trerrariumss</span>
+                 <span class="categori__count">(19)</span>
+              </label>
             </li>
             <li class="categori">
-              <span class="cat-name active">Gardening</span>
-              <span class="cat-count">(13)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="gard">
+                 <span class="categori__name">Gardening</span>
+                 <span class="categori__count">(13)</span>
+              </label>
             </li>
             <li class="categori">
-              <span class="cat-name active">Accessories</span>
-              <span class="cat-count">(18)</span>
+              <label class="categori__options">
+                 <input type="radio" name="category" value="accs">
+                 <span class="categori__name">Accessories</span>
+                 <span class="categori__count">(18)</span>
+              </label>
             </li>
           </ul>          
         </nav>
@@ -220,18 +278,27 @@
         </div>
         <nav class="categories">
           <ul>
-            <span class="infoCat" >Size</span>
+            <span class="infoCat" >Size</span>            
             <li class="categori">
-              <span>Small</span>
-              <span>(119)</span>
+              <label class="categori__size">
+                <input type="radio" name="size" value="smallPlant">
+                <span class="categori__name">Small</span>
+                <span class="categori__count">(119)</span>
+              </label>
             </li>
             <li class="categori">
-              <span>Medium</span>
-              <span>(86)</span>
+              <label class="categori__size">
+                <input type="radio" name="size" value="mediumPlant">
+                <span class="categori__name">Medium</span>
+                <span class="categori__count">(86)</span>
+              </label>
             </li>
             <li class="categori">
-              <span >Large</span>
-              <span>(78)</span>
+              <label class="categori__size">
+                <input type="radio" name="size" value="largePlant">
+                <span class="categori__name">Large</span>
+                <span class="categori__count">(78)</span>
+              </label>
             </li>
           </ul>
         </nav>
@@ -252,9 +319,24 @@
       <!-- верхнє меню -->
       <div class="navANDsort">
         <nav class="navShop">
-          <li class="shopCat">All Plants</li>
-          <li class="shopCat">New Arrivals</li>
-          <li class="shopCat">Sale</li>
+          <li class="shopCat">
+            <label class="shopCat__opt">
+              <input type="radio" name="shopCat" value="all" checked>
+              <span>All Plants</span>
+            </label>
+          </li>
+          <li class="shopCat">
+            <label class="shopCat__opt">
+              <input type="radio" name="shopCat" value="new">
+              <span>New Arrivals</span>
+            </label>
+          </li>
+          <li class="shopCat">
+            <label class="shopCat__opt">
+              <input type="radio" name="shopCat" value="sale">
+              <span>Sale</span>
+            </label>
+          </li>
         </nav>
         <div class="sort">
           Sort by: Default Sorting ↓
@@ -472,15 +554,30 @@
   </div>
   <!-- окремий блок з навігацією по сторінкам -->
   <div class="pages">
-    <button class="page activePage">1</button>
-    <button class="page"><span class="number">2</span></button>
-    <button class="page"><span class="number">3</span></button>
-    <button class="page"><span class="number">4</span></button>
-    <button class="page"><span class="number">
-      <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
-      <path d="M0.75 0.75C0.75 0.75 6 3.858 6 6C6 8.14125 0.75 11.25 0.75 11.25" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span></button>
+    <label class="pages_btn">
+      <input type="radio" name="button" value="1" checked>
+      <button class="page">1</button>    
+    </label>
+    <label class="pages_btn">
+      <input type="radio" name="button" value="2">
+      <button class="page">2</button>    
+    </label>
+    <label class="pages_btn">
+      <input type="radio" name="button" value="3">
+      <button class="page">3</button>    
+    </label>
+    <label class="pages_btn">
+      <input type="radio" name="button" value="4">
+      <button class="page">4</button>    
+    </label>
+    <label class="pages_btn">
+      <input type="radio" name="button" value="5">
+      <button class="page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+        <path d="M0.75 0.75C0.75 0.75 6 3.858 6 6C6 8.14125 0.75 11.25 0.75 11.25" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>    
+    </label>
   </div>
 
   <!-- загальний контейнер -->

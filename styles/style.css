@@ -315,11 +315,28 @@ div.rightPart{
     font-weight: 400;
     line-height: 40px;
 }
+.categori__options, .categori__size{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+
+    cursor: pointer;
+}
+.categori__options input[type="radio"], .categori__size input[type="radio"] {
+  display: none;
+}
+.categori__options input[type="radio"]:checked + .categori__name,
+.categori__options input[type="radio"]:checked + .categori__name + .categori__count,
+.categori__size input[type="radio"]:checked + .categori__name,
+.categori__size input[type="radio"]:checked + .categori__name + .categori__count{
+  color: #46A358;
+  font-style: normal;
+  font-weight: 700; 
+}
+
 /* обрана категорія */
 .categories li.categori:hover{
-    color: #46A358;
-    font-style: normal;
-    font-weight: 700;    
+    color: #46A358; 
 }
 /* блок реклами */
 .imgBigSale{    
@@ -412,11 +429,20 @@ div.rightPart{
     gap: 40px;
 }
 /* категорії */
-.shopCat{
+.shopCat span{
     padding-bottom: 7px;    
     border-bottom: 3px solid transparent;
     user-select: none;
+    cursor: pointer;
 }
+.shopCat__opt input[type="radio"]{
+    display: none;
+}
+.shopCat__opt input[type="radio"]:checked + span{
+    border-color: #46A358;
+    font-weight: 700;
+}
+
 
 /* активна категорія */
 .shopCat:hover{
@@ -588,11 +614,18 @@ div.rightPart{
     justify-content: flex-end;
     gap: 10px;
 }
+.pages_btn input[name ="button"]
+{
+    display: none;
+}
+.pages_btn input:checked + .page{    
+    background: #46A358;
+    color: #FFF;
+}
 /* кнопка сторінки */
 .page{
     /* щоб вирівняти 1-цю з іншими цифрами */
-    min-width: 35px;
-    
+    min-width: 35px;   
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #E5E5E5;
@@ -602,20 +635,13 @@ div.rightPart{
 }
 .page:hover{
     border: 1px solid #46A358;
-}
-.page:hover span.number{
     color: #46A358;
 }
 .page:hover svg path{
     stroke: #46A358;
 }
-.page span.number{
-    color: #3D3D3D;    
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 16px; /* 88.889% */   
-}
+
+
 /* кнопка обраної сторінки */
 .page.activePage{ 
     padding: 10px;       
