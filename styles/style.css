@@ -1195,3 +1195,61 @@ div.rightPart{
   border: none;
   cursor: pointer; /* щоб по центру доріжки */
 }
+
+
+@media screen and (max-width: 1200px){
+.container{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.containerForShopContent{
+    padding: 0px 30px 50px;
+    display: flex;        
+    gap: 50px; 
+}
+.shop{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;   
+}
+.otherInfoContainer {
+    padding: 69px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.findMoreCards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.findMoreCards > li {
+    padding: 15px 10px;
+    min-width: 560px;
+    display: flex;
+    background-color: #FBFBFB;
+}
+.testWithPosition {
+    z-index: 1;
+    position: relative;
+    right: 5px;
+    bottom: 100px;
+}
+.blogCards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+}
+@media screen and (max-width: 992px){
+    
+}
+@media screen and (max-width: 768px){
+    
+}
+@media screen and (max-width: 540px){
+    
+}
