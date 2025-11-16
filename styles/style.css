@@ -614,16 +614,8 @@ div.rightPart{
     justify-content: flex-end;
     gap: 10px;
 }
-.pages_btn input[name ="button"]
-{
-    display: none;
-}
-.pages_btn input:checked + .page{    
-    background: #46A358;
-    color: #FFF;
-}
 /* кнопка сторінки */
-.page{
+.pageBTN{
     /* щоб вирівняти 1-цю з іншими цифрами */
     min-width: 35px;   
     padding: 10px;
@@ -633,11 +625,11 @@ div.rightPart{
     cursor: pointer;
     transition: all 1s;
 }
-.page:hover{
+.pageBTN:hover{
     border: 1px solid #46A358;
     color: #46A358;
 }
-.page:hover svg path{
+.pageBTN:hover svg path{
     stroke: #46A358;
 }
 
@@ -1213,6 +1205,13 @@ div.rightPart{
     gap: 30px;
     justify-content: space-around;   
 }
+.pages {
+    margin-right: 30px;
+    margin-bottom: 90px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
 .otherInfoContainer {
     padding: 69px 30px;
     display: flex;
@@ -1243,13 +1242,184 @@ div.rightPart{
     gap: 30px;
     flex-wrap: wrap;
 }
+.foot {
+    padding: 90px 30px 22px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FBFBFB;
+}
 }
 @media screen and (max-width: 992px){
-    
+.findMoreCards {
+        display: flex;
+        gap: 70px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+}
+.blogCards {
+        display: flex;
+        justify-content: space-around;
+        gap: 70px;
+        flex-wrap: wrap;
+}
+.downFoot {
+    padding: 30px 25px 30px 25px;
+    display: flex;
+    gap: 100px;
+    border-bottom: 1px solid #46a35833;
+    justify-content: space-between;
+}    
+}
+@media screen and (max-width: 960px){
+.container header {
+    display: flex;
+    border-bottom: 1px solid rgba(70, 163, 88, 0.50);
+    margin-bottom: 12px;
+    flex-direction: column;
+    align-items: center;
+}
+.list-item {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-bottom: 3px solid transparent;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+.firstLevel {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #3D3D3D;
+    font-family: "Encode Sans Expanded";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: none;
+}
+.headerRightElements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    padding: 1%;
+}
+.btnlogin {
+    margin-top: 0px;    
+}
+.leftShopPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 250px;
+}
+.bigPlant {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.main div.leftPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 68px 0px 85px 40px;
+    gap: 7px;
+}
+.main {
+    background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.shopnow{
+    align-self: center;
+}
 }
 @media screen and (max-width: 768px){
-    
+.foot {
+    padding: 30px;
 }
-@media screen and (max-width: 540px){
-    
+.upFoot {
+    flex-direction: column;        
+}
+.middleFoot {   
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(180deg, #EDF6EF 0%, #52C368 100%);
+}
+.downFoot {    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.navShop {
+    gap: 9px;
+}
+.navANDsort {
+    flex-wrap: wrap;
+    gap: 15px;
+}
+}
+@media screen and (max-width: 644px){
+.main div.leftPart {
+    padding: 68px 0px 85px;
+} 
+.bigletter{
+    font-size: 50px;
+    line-height: 50px; /* 100% */
+}
+.bigletter span.greenBoy{
+    font-size: 50px;
+}
+.containerForShopContent {
+    flex-direction: column;
+}
+.leftShopPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+}
+.findMoreCards > li {
+    padding: 15px 10px;
+    min-width: 0px;
+    display: flex;
+    background-color: #FBFBFB;
+}
+}
+@media screen and (max-width: 515px){
+div.rightPart {
+    width: auto;
+    height: auto;
+}
+.smallPlant {
+    display: none;
+}
+.areaForImage {
+    height: 180px;
+    width: 100px;
+    z-index: 0;
+}
+.info {
+    z-index: 1;
+}
+.findMoreCards > li p {
+    color: #52C368;
+    font-weight: 700;
+}
+.list {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+}
+@media screen and (max-width: 370px){
+.findMoreCards{
+    display: none;
+}    
 }
